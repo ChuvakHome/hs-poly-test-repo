@@ -16,4 +16,4 @@ jobs:
        run: stack upgrade
 
      - name: Run Stack tests
-       run: stack --test
+       run: stack test
