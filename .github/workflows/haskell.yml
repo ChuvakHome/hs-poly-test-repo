@@ -18,5 +18,8 @@ jobs:
      - name: Checkout code
        uses: actions/checkout@v4
 
+     - name: Print wd
+       run: pwd
+
      - name: Run Stack tests
-       run: mkdir $GITHUB_WORKSPACE/.stack && stack --stack-root $GITHUB_WORKSPACE/.stack test
+       run: mkdir /root/.stack && stack --stack-root /root/.stack test
