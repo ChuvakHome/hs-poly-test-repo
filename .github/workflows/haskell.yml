@@ -8,8 +8,11 @@ permissions:
   checks: write
   actions: read
 jobs:
-  build:
+  run-tests:
     runs-on: ubuntu-latest
+    container: 
+      image: haskell
+      options: --user root
 
     steps:
      - name: Install Stack
