@@ -13,7 +13,7 @@ jobs:
 
     steps:
      - name: Install Stack
-       run: curl -sSL https://get.haskellstack.org/ | sh
+       run: stack upgrade
 
      - name: Run Stack tests
        run: stack --test
