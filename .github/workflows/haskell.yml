@@ -18,8 +18,5 @@ jobs:
      - name: Checkout code
        uses: actions/checkout@v4
 
-     - name: Echo github-workspace dir
-       run: echo $GITHUB_WORKSPACE
-
      - name: Run Stack tests
-       run: sudo stack test
+       run: mkdir $GITHUB_WORKSPACE/.stack && stack --stack-home $GITHUB_WORKSPACE/.stack test
