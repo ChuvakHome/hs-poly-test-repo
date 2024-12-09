@@ -18,8 +18,5 @@ jobs:
      - name: Checkout code
        uses: actions/checkout@v4
 
-     - name: Print wd
-       run: pwd
-
      - name: Run Stack tests
-       run: mkdir /root/.stack && stack --stack-root /root/.stack test
+       run: mkdir -p /root/.stack && stack --stack-root /root/.stack test
