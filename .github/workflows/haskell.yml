@@ -2,12 +2,11 @@
 name: Haskell Stack Tests
 
 on:
-  push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - master
+  - push
+  - pull_request
+permissions:
+  checks: write
+  actions: read
 jobs:
   build:
     runs-on: ubuntu-latest
