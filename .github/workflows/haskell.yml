@@ -12,10 +12,12 @@ jobs:
     runs-on: ubuntu-latest
     container: 
       image: haskell
-      options: --user root
 
     steps:
-     - name: Install Stack
+     - name: Checkout code
+       uses: actions/checkout@v4
+       
+     - name: Upgrade Stack
        run: stack upgrade
 
      - name: Run Stack tests
