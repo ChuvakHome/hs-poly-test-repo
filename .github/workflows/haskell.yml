@@ -19,4 +19,4 @@ jobs:
        uses: actions/checkout@v4
 
      - name: Run Stack tests
-       run: mkdir $GITHUB_WORKSPACE/.stack && stack --stack-home $GITHUB_WORKSPACE/.stack test
+       run: mkdir $GITHUB_WORKSPACE/.stack && stack --stack-root $GITHUB_WORKSPACE/.stack test
