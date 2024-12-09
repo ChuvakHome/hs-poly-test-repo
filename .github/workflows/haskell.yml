@@ -19,4 +19,4 @@ jobs:
        uses: actions/checkout@v4
 
      - name: Run Stack tests
-       run: mkdir -p /root/.stack && cp -r $GITHUB_WORKSPACE /root/gh-ci-tests && cd /root/gh-ci-tests && stack --system-ghc --stack-root /root/.stack test
+       run: mkdir -p /root/.stack && cp -r $GITHUB_WORKSPACE /root/gh-ci-tests && cd /root/gh-ci-tests && stack --stack-root /root/.stack upgrade && stack --stack-root /root/.stack test 
