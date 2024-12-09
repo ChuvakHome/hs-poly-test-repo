@@ -1,0 +1,20 @@
+
+name: Haskell Stack Tests
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+     - name: Install Stack
+       run: curl -sSL https://get.haskellstack.org/ | sh
+
+     - name: Run Stack tests
+       run: stack --test
