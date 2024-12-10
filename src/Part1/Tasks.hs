@@ -26,7 +26,7 @@ myPow = notImplementedYet
 
 -- является ли данное число простым?
 isPrime :: Integer -> Bool
-isPrime = notImplementedYet
+isPrime _ = False
 
 type Point2D = (Double, Double)
 
